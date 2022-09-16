@@ -1,0 +1,50 @@
+:root{
+    --bg-color:#303030;
+    --text : #ffff;
+}
+
+nav{
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    z-index: 1000;
+
+}
+
+nav a{
+    position: relative;
+    left: 40vh;
+    width: 158px;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--text) ;
+    cursor: pointer;
+    margin: 20px 60px 21px 0px;
+}
+
+.SO-FUNKTIONIERTS{
+    height: 19px;
+    margin: 20px 60px 21px 341px;
+}
+
+.MEIN-BEREICH{
+    background-color: #d0ba93;
+    width: 200px;
+    vertical-align: middle;
+    padding: 0px 10px;
+    margin: 0px 64px 0px 0px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    
+}
