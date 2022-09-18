@@ -16,7 +16,7 @@ const Navbar = () =>{
                 <button onClick={()=>setOpen(!open)}>Menue</button>
                 {
                     open &&
-                    <div className='nav'>
+                    <div className='responsive_nav'>
                      <p>SO FUNKTIONIERTS</p>
                      <p>SONDERANGEBOTE</p>
                      <p>MEIN BEREICH</p>

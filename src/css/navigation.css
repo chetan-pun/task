@@ -67,7 +67,7 @@ nav a:hover{
     display: none;
 }
 
-.nav{
+.responsive_nav{
     display: none;
 
     position: absolute;
@@ -77,7 +77,7 @@ nav a:hover{
     background-color: var(--bg-color);
 }
 
-.nav p,.hamburger button{
+.responsive_nav p,.hamburger button{
     font-family: Montserrat;
     font-size: 15px;
     font-weight: 600px;
@@ -91,7 +91,7 @@ nav a:hover{
     transition: 300ms;
 }
 
-.nav p:hover{
+.responsive_nav p:hover{
     background-color:#d0ba93 ;
 }
 
@@ -118,7 +118,7 @@ nav a:hover{
 
          
      }
-     .nav{
+     .responsive_nav{
         display: block;
      }
 

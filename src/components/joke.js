@@ -26,8 +26,7 @@ export default function Joke(){
         if(index === 0) return;
         changeIndex(--index)
     }
-    
-    console.log(disable)
+
     
 
     return(
