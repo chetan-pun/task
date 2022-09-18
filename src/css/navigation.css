@@ -5,8 +5,9 @@
 
 nav{
     background-color: var(--bg-color);
-    position: fixed;
+  
     top: 0px;
+    right: 0px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -17,9 +18,10 @@ nav{
 }
 
 nav a{
+    
     position: relative;
-    left: 40vh;
-    width: 158px;
+    
+    /* width: 158px; */
     font-family: Montserrat;
     font-size: 15px;
     font-weight: 600px;
@@ -29,22 +31,95 @@ nav a{
     letter-spacing: normal;
     color: var(--text) ;
     cursor: pointer;
-    margin: 20px 60px 21px 0px;
+    width: 200px;
+    padding: 0px 10px;
+    margin: 0px 0px 0px 0px;
+    height: 60px;
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
 }
 
 .SO-FUNKTIONIERTS{
-    height: 19px;
-    margin: 20px 60px 21px 341px;
+    
+    margin: 0px 0px 0px 45vw;
 }
 
-.MEIN-BEREICH{
+nav a:hover{
+    background-color: #d0ba93;
+}
+
+/* .MEIN-BEREICH{
     background-color: #d0ba93;
     width: 200px;
-    vertical-align: middle;
     padding: 0px 10px;
     margin: 0px 64px 0px 0px;
     height: 60px;
     display: flex;
     align-items: center;
     
+} */
+
+.hamburger{
+    
+    display: none;
+}
+
+.nav{
+    display: none;
+
+    position: absolute;
+    top: 60px;
+    transition: 500ms;
+    right: 0px;
+    background-color: var(--bg-color);
+}
+
+.nav p,.hamburger button{
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--text) ;
+    cursor: pointer;
+    padding: 15px 30px;
+    transition: 300ms;
+}
+
+.nav p:hover{
+    background-color:#d0ba93 ;
+}
+
+@media only screen and (max-width: 1100px){
+     .hamburger{
+        display: block;
+        
+     }
+     nav a{
+        display: none;
+     }
+
+     nav{
+        height: 60px;
+     }
+     
+     .hamburger button{
+         position: absolute;
+         right: 20px;
+         top: 10px;
+         background-color: transparent;
+         border: none;
+         cursor: pointer;
+
+         
+     }
+     .nav{
+        display: block;
+     }
+
 }

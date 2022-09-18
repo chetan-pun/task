@@ -4,14 +4,13 @@ import '../css/main.css';
 import search_icon from '../images/search-copy.png'
 import Jokes from "./jokes";
 import { useSearch } from "../context/searchProvider";
-import { useJoke } from "../context/jokeProvider";
 import Joke from "./joke";
 
 const Main = () =>{
 
   let [search,setSearch] = useState('');
-  let {handleSearch,jokes,jokeType,setJoketype,types} = useSearch();
-  let {seeJoke} = useJoke();
+  let {handleSearch,jokes,jokeType,setJoketype,types,seeJoke} = useSearch();
+
 
 
     let handleClick = (type)=>{
@@ -30,6 +29,7 @@ const Main = () =>{
  //executes if jokeType changes
   useEffect(()=>{
     handleSearch(jokeType)
+    window.scrollTo({top: 600, left: 0, behavior: 'smooth'});
   },[jokeType])
   
   let handleInput = (e)=>{
@@ -47,12 +47,12 @@ const Main = () =>{
               <label>
               <img className="search_icon" src ={search_icon} onClick ={()=>handleSearch(search)} alt = "search icon"/>
               </label>
-              {/* <button onClick={()=>handleSearch(search)}>hello</button> */}
             </div>
             {
               seeJoke ? 
               <Joke/>
               :
+              
               <div className="jokes_div" >
                <div className="joke_options">
                 {options}

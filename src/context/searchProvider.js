@@ -24,14 +24,27 @@ let SearchProvider = ({children})=>{
     
     let [jokes,setJokes] = useState([]);
     let [jokeType,setJokeType] = useState('adult');
-    
+    let [seeJoke,setSeeJoke] = useState(false);
+    let [index,setIndex] = useState(0);
+
+    let setseeJoke=()=>{
+        setSeeJoke(!seeJoke);
+    }
+
+
+    let changeIndex = (index) => setIndex(index);
     let setJoketype = (type) => setJokeType(type);
 
     let handleSearch = async(search) =>{
+        setSeeJoke(false)
         await axios.get(`https://api.chucknorris.io/jokes/search?query=${search}`)
         .then((re)=>{
             setJokeType(search);
             setJokes(re.data);
+            if(re.data.total === 1){
+                setseeJoke();
+                changeIndex(0);
+            }
         })
         .catch(()=>{
             setJokeType(search);
@@ -41,7 +54,7 @@ let SearchProvider = ({children})=>{
 
 
     return(
-         <SearchContext.Provider value = {{jokes,handleSearch,jokeType,setJoketype,types}} >
+         <SearchContext.Provider value = {{jokes,handleSearch,jokeType,setJoketype,types,seeJoke,setseeJoke,index,changeIndex}} >
              {children}
          </SearchContext.Provider>
     )
