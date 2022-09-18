@@ -8,7 +8,7 @@ export default function Joke(){
     let {jokeType,jokes,setseeJoke,index,changeIndex} = useSearch();
     let joke = jokes.result[index];
     let [disable,setDisable] = useState(false);
-    let[toggle,setToggle] = useState(false);
+
 
     
     let handleBack = () =>{

@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import { useState ,useEffect} from "react";
 import '../css/main.css';
 import search_icon from '../images/search-copy.png'
@@ -21,6 +21,7 @@ const Main = () =>{
         <p key = {joke.id} id = {joke.id} onClick = {()=>handleClick(joke.id)}>{joke.content}</p>
     )
   })
+
   //it executed when the page first loads
   useEffect(()=>{
      handleSearch(jokeType)
@@ -29,7 +30,7 @@ const Main = () =>{
  //executes if jokeType changes
   useEffect(()=>{
     handleSearch(jokeType)
-    window.scrollTo({top: 600, left: 0, behavior: 'smooth'});
+    window.scrollTo({top: 630, left: 0, behavior: 'smooth'});
   },[jokeType])
   
   let handleInput = (e)=>{

@@ -9,7 +9,7 @@ const Navbar = () =>{
 
     return(
         <nav>
-            <a className='SO-FUNKTIONIERTS'>SO FUNKTIONIERTS</a>
+            <a  className='SO-FUNKTIONIERTS'>SO FUNKTIONIERTS</a>
             <a>SONDERANGEBOTE</a>
             <a className='MEIN-BEREICH'>MEIN BEREICH</a>
             <div className='hamburger'>

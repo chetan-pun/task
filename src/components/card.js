@@ -4,7 +4,7 @@ import '../css/main.css';
 import current from '../images/green-light.png';
 
 export default function Card({category,url,joke,index}){
-   let {changeCategory,setseeJoke,setjoke,changeIndex} = useSearch();
+   let {setseeJoke,changeIndex} = useSearch();
 
    let handleClick = ()=>{
        setseeJoke();
